@@ -25,7 +25,7 @@ const Header = () => {
                 <Link href='/'>
                     {/* <Image src='../public/MILON.jpg' width={30} height={30} unoptimized alt='MILON'/> */}
                     <span className='cursor-pointer font-bold text-4xl text-white'>
-                        <span className='text-red-500 container'>M</span>ilon's Blog
+                        <span className='text-red-500 container'>M</span>ilon&apos;s Blog
                     </span>
                 </Link>
             </div>

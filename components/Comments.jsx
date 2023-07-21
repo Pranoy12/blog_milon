@@ -12,7 +12,7 @@ const Comments = ({ comment }) => {
 
   useEffect(() => {
     setComments(comment);
-  }, [])
+  }, [comment])
 
 
   return (
