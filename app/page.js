@@ -1,6 +1,7 @@
 import Categories from "@/components/Categories"
 import PostCard from "@/components/PostCard"
 import PostWidget from "@/components/PostWidget"
+import Teacher from "@components/Teacher";
 import Featured from "@sections/Featured";
 import FeaturedPosts from "@sections/FeaturedPosts";
 // import { getPosts } from "@services"
@@ -71,6 +72,7 @@ export default async function Home() {
           ))}
         </div>
         <div className="lg:col-span-4 col-span-1">
+          <Teacher posts = {posts}/>
             <div className="lg:sticky relative top-8">
               <PostWidget />
               <Categories />
