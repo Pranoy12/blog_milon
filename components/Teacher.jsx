@@ -1,42 +1,7 @@
-// import moment from 'moment'
-// import Link from 'next/link'
-// import React from 'react'
-
 import getMainPost from "@server/getMainPost";
 import moment from "moment";
+import Image from "next/image";
 import Link from "next/link";
-
-// const Teacher = ({ posts }) => {
-//   return (
-//     <div className='bg-white shadow-lg rounded-lg p-8 mb-10' style={{ backgroundImage: "url(https://media.graphassets.com/ldZGw2EuSIqYnzUS7FL9)", opacity: 0.5 }}>
-//       {/* <h3 className='text-xl mb-8 font-semibold border-b pb-4'>My Mentor</h3> */}
-//       <div className='mb-10 pb-5'></div>
-//       {posts.map((post) => {
-//   if (post.node.slug === "teacher") {
-//     return (
-//       <div key={post.node.title} className='flex items-center w-full mb-20'>
-
-//         <div className='flex-grow ml-4'>
-
-//           <Link key={post.node.title} href={`/post/${post.node.slug}`} className='text-md text-black-500 font-bold'> 
-//             {post.node.title}
-//             <div>
-//                 <span className='text-xs'>Click to Read</span>
-//             </div>
-//           </Link>
-//         </div>
-//       </div>
-//     );
-//   } else {
-//     return null; // Render nothing for other posts
-//   }
-// })}
-
-//     </div>
-//   )
-// }
-
-// export default Teacher
 
 
 export default async function Teacher () {
