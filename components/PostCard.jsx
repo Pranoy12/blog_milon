@@ -15,21 +15,6 @@ const PostCard = ({ post }) => {
               className='absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg'
               // className='h-auto max-w-lg mx-auto transition-all duration-300 rounded-lg cursor-pointer filter grayscale hover:grayscale-0'
             />
-            {/* <div className="relative">
-              <img 
-                src={post.featuredImage.url} 
-                alt={post.title}
-                className="object-top h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
-              />
-
-              <div className="absolute inset-0 opacity-0 hover:opacity-100 transition-opacity">
-                <img
-                  src={post.featuredImage.url}
-                  alt={post.title}
-                  className="object-contain w-full h-full"
-                />
-              </div>
-            </div> */}
           </div>
           <h1 className='transition duration-100 text-center mb-8 cursor-pointer hover:text-pink-600 text-3xl font-semiblod'>
             <Link href={`/post/${post.slug}`}>

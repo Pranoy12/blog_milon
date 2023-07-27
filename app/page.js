@@ -4,60 +4,13 @@ import PostWidget from "@/components/PostWidget"
 import Teacher from "@components/Teacher";
 import Featured from "@sections/Featured";
 import FeaturedPosts from "@sections/FeaturedPosts";
+import getPosts from "@server/getPosts";
 // import { getPosts } from "@services"
 
 // const posts = [
 //   {title: 'React Testing', excerpt: 'Learn React Testing'},
 //   {title: 'React with Tailwind', excerpt: 'Learn React with Tailwind'},
 // ]
-
-
-async function getPosts() {
-  const response = await fetch(process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    next: {
-      revalidate: 10,
-    },
-    body: JSON.stringify({
-      query: `
-          query MyQuery {
-                postsConnection {
-                  edges {
-                    node {
-                      author {
-                        bio
-                        name
-                        photo {
-                          url
-                        }
-                      }
-                      createdAt
-                      slug
-                      title
-                      excerpt
-                      featuredImage {
-                        url
-                      }
-                      categories {
-                        name
-                        slug
-                      }
-                    }
-                  }
-                }
-              }
-        `,
-    }),
-  });
-  const json = await response.json();
-
-  return json.data.postsConnection.edges;
-}
-
-
 
 export default async function Home() {
   const posts = await getPosts();
