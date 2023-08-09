@@ -12,7 +12,10 @@ async function getPosts() {
       body: JSON.stringify({
         query: `
             query MyQuery {
-                  postsConnection (first: 500) {
+                  postsConnection (
+                    first: 500
+                    orderBy: createdAt_DESC
+                    ) {
                     edges {
                       node {
                         author {

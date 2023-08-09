@@ -10,8 +10,8 @@ const Author = ({ author }) => {
           <Image
               alt={author.name}
               unoptimized
-              height={100}
-              width={100}
+              height={50}
+              width={80}
               className='align-middle rounded-full'
               src={author.photo.url}
           />

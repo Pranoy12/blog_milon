@@ -22,17 +22,28 @@ const PostCard = ({ post }) => {
             </Link>
           </h1>
           <div className='block lg:flex text-center items-center justify-center mb-8 w-full'>
-            <div className='flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8'>
+            <div className='flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-12'>
               {post.author ? (
               <div> 
                 <img  
                 alt={post.author.name}
                 height="30px"
                 width="30px"
-                className='align-middle rounded-full'
+                className='align-middle rounded-full ml-12'
                 src={post.author.photo.url}
               />
-              <p className='inline align-middle text-gray-700 ml-2 text-lg'>{post.author.name}</p>
+              <div className='flex flex-row'>
+                <svg fill="#000000" height="40px" width="40px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="-302.08 -302.08 1116.16 1116.16" xmlSpace="preserve">
+
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"/>
+
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+
+                  <g id="SVGRepo_iconCarrier"> <g> <g> <path d="M446.029,0L130.498,267.303l-20.33,66.646c-8.624,7.369-19.857,11.39-32.017,11.391c-4.776,0-9.583-0.622-14.293-1.848 l-14.438-3.761L0,512l172.268-49.421l-3.759-14.438c-4.454-17.1-0.883-34.137,9.54-46.309l66.648-20.331L512,65.971L446.029,0z M136.351,441.068l-61.413,17.618l42.732-42.732L96.045,394.33l-42.731,42.732l17.627-61.444c2.401,0.202,4.807,0.303,7.21,0.303 c16.215-0.001,31.518-4.56,44.35-13.043l26.609,26.609C139.202,404.41,134.73,422.458,136.351,441.068z M173.977,371.102 l-33.079-33.078l10.109-33.14l56.109,56.109L173.977,371.102z M235.003,345.632l-68.636-68.636l46.828-39.671l61.478,61.478 L235.003,345.632z M236.61,217.492L444.314,41.535l26.152,26.152L294.509,275.391L236.61,217.492z"/> </g> </g> </g>
+
+                </svg>
+                <span className='inline align-middle text-gray-700 text-lg mt-2'>{post.author.name}</span>
+              </div>
               </div>
               ) : (<div></div>)}
             </div>
